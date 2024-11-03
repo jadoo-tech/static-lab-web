@@ -13,8 +13,15 @@ const config = {
 		// See https://svelte.dev/docs/kit/adapters for more information about adapters.
 		adapter: adapter({
 			entryPoint: './server.js'
-		})
-	}
+		}),
+		// Trust the proxy headers
+		protocolHeader: 'X-Forwarded-Proto',
+		hostHeader: 'X-Forwarded-Host',
+	},
+	host: {
+		// Allow the specific hostname
+		allowed: ['nanotech.berkeley.edu'],
+	},
 };
 
 export default config;
