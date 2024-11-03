@@ -14,7 +14,6 @@ const config = {
 		adapter: adapter({
 			entryPoint: 'server.js'
 		}),
-		// Trust the proxy headers
 		protocolHeader: 'X-Forwarded-Proto',
 		hostHeader: 'X-Forwarded-Host',
 	},

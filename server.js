@@ -1,6 +1,7 @@
 // custom-server.js
 import { handler } from './build/handler.js';
 import http from 'http';
+import { unlinkSync } from 'fs';
 
 const socketPath = process.env.PORT;
 
