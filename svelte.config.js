@@ -14,8 +14,6 @@ const config = {
 		adapter: adapter({
 			entryPoint: 'server.js'
 		}),
-		protocolHeader: 'X-Forwarded-Proto',
-		hostHeader: 'X-Forwarded-Host',
 	},
 	host: {
 		// Allow the specific hostname
