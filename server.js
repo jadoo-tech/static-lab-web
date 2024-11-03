@@ -19,7 +19,6 @@ const socketPath = process.env.PORT;
 
 const callback = res => {
 
-    res.setEncoding('utf8');
     res.on('data', data => console.log(data));
     res.on('error', data => console.error(data));
 
