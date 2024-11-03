@@ -4,7 +4,15 @@ import http from 'http';
 
 const socketPath = process.env.PORT;
 
-const server = http.createServer(handler);
+
+const server = http.createServer((req, res) => {
+    // Trust the proxy by adjusting the request headers
+    req.headers['x-forwarded-host'] = req.headers['host'];
+    req.headers['host'] = req.headers['x-forwarded-host'];
+
+    handler(req, res);
+});
+
 
 server.listen(socketPath, () => {
   console.log(`Server is listening on Unix socket: ${socketPath}`);
