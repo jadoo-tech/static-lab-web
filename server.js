@@ -15,9 +15,17 @@ app.use(handler);
 // Unix socket path
 const socketPath = process.env.PORT;
 
-server.listen(socketPath, () => {
-  console.log(`Server running on Unix socket: ${socketPath}`);
-});
+
+
+const callback = res => {
+
+    res.setEncoding('utf8');
+    res.on('data', data => console.log(data));
+    res.on('error', data => console.error(data));
+
+};
+
+server.listen(socketPath, callback);
 
 // Cleanup on exit
 process.on('SIGINT', () => {
