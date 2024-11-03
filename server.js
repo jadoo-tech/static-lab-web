@@ -1,35 +1,30 @@
-import { handler } from './build/handler.js';
 import express from 'express';
-import http from 'http';
-import { Server } from 'socket.io';
+import path from 'path';
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
 
 const app = express();
-const server = http.createServer(app);
 
-// Add Socket.IO if needed
-const io = new Server(server);
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
+// Serve static files from the 'build' directory
+app.use(express.static(path.join(__dirname, 'build')));
 
 // SvelteKit handler
-app.use(handler);
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'build', 'index.html'));
+});
 
 // Unix socket path
-const socketPath = process.env.PORT;
+const socketPath = process.env.PORT || 3000;
 
-
-
-const callback = res => {
-
-    res.on('data', data => console.log(data));
-    res.on('error', data => console.error(data));
-
-};
-
-server.listen(socketPath, callback);
+app.listen(socketPath, () => {
+  console.log(`Server is running on port ${socketPath}`);
+});
 
 // Cleanup on exit
 process.on('SIGINT', () => {
-  server.close(() => {
-    console.log('Server closed');
-    process.exit(0);
-  });
+  console.log('Server closed');
+  process.exit(0);
 });

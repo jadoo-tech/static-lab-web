@@ -9,7 +9,6 @@
 	let { children, data } = $props<{ data: LayoutData }>();
 	import Nav from './nav.svelte';
 
-	let useWideLayout = $derived(data?.useWideLayout ?? false);
 </script>
 
 <style>
