@@ -75,7 +75,7 @@
 }
 
 .section-title {
-  @apply text-3xl font-bold mb-4 text-center;
+  @apply text-3xl font-bold my-4 text-center;
 }
 
 .subsection-title {
@@ -99,10 +99,11 @@
 }
 
 .page-content-wide {
+  @apply py-6 mx-auto;
 }
 
 a {
-  @apply text-blue-800 dark:text-blue-300 hover:text-blue-600 transition-colors;
+  @apply text-blue-800 dark:text-blue-300 hover:text-blue-600 transition-colors duration-200 ease-in-out;
 }
 
 .section-text {
