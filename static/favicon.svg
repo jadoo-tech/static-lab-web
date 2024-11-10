@@ -1,0 +1,9 @@
+<svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <!-- Gold nucleus -->
+  <circle cx="32" cy="32" r="8" fill="#FDB515" />
+  
+  <!-- Blue electron orbits -->
+  <ellipse cx="32" cy="32" rx="24" ry="8" fill="none" stroke="#003262" stroke-width="4" />
+  <ellipse cx="32" cy="32" rx="24" ry="8" fill="none" stroke="#003262" stroke-width="4" transform="rotate(60 32 32)" />
+  <ellipse cx="32" cy="32" rx="24" ry="8" fill="none" stroke="#003262" stroke-width="4" transform="rotate(120 32 32)" />
+</svg>
