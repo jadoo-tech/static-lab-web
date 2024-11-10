@@ -1,7 +1,7 @@
 <div class="page-content">
     <h1 class="section-title">Research</h1>
     
-    <h2 class="subsection-title">Exploring the Nano Frontier</h2>
+    <h2 class="subsection-title">Exploring Nanotechnology</h2>
     <p class="subsection-text">
         Our lab focuses on several key research areas:
     </p>
@@ -35,4 +35,14 @@
             <strong>Semiconductor Industry:</strong> Advancing fabrication techniques and materials for next-generation devices.
         </li>
     </ul>
+
+    <div class="section-title">
+        <h2>Learn more about our work through project areas</h2>
+        <!-- button to go to project areas page -->
+        <a href="/areas" class="button">
+            <button class="m-4 p-2 rounded-md bg-gray-200 dark:bg-gray-800 hover:bg-gray-300 dark:hover:bg-gray-700">
+                Project Areas
+            </button>
+        </a>
+    </div>
 </div>
