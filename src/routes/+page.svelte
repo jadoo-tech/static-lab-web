@@ -10,7 +10,7 @@
 
 <div class="relative h-screen" style="height: 86vh;">
 
-    <div style="background-image: url('/graphene.webp'); background-size: cover; background-position: center;" class="absolute inset-0 rounded-lg">
+    <div style="background-image: url('https://images.unsplash.com/photo-1630959305606-3123a081dada'); background-size: cover; background-position: center;" class="absolute inset-0 rounded-lg">
     </div>
     
     <div class="relative z-10 flex items-center justify-center h-full px-8">
